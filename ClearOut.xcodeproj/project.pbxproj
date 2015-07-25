@@ -15,6 +15,7 @@
 		8912566D1B6336E900427A4D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8912566C1B6336E900427A4D /* Images.xcassets */; };
 		891256701B6336E900427A4D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8912566E1B6336E900427A4D /* LaunchScreen.xib */; };
 		8912567C1B6336E900427A4D /* ClearOutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8912567B1B6336E900427A4D /* ClearOutTests.m */; };
+		CE044AB5F165D3EB97CA5B07 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E767690C30E14E6CF12402B6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,9 @@
 		891256751B6336E900427A4D /* ClearOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8912567A1B6336E900427A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8912567B1B6336E900427A4D /* ClearOutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClearOutTests.m; sourceTree = "<group>"; };
+		D958C9C83852EBCE99017D7B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DEE8AD286E8442E1EE7136AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E767690C30E14E6CF12402B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE044AB5F165D3EB97CA5B07 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,12 +68,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1345EB67A747469825534304 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E767690C30E14E6CF12402B6 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		891256501B6336E900427A4D = {
 			isa = PBXGroup;
 			children = (
 				8912565B1B6336E900427A4D /* ClearOut */,
 				891256781B6336E900427A4D /* ClearOutTests */,
 				8912565A1B6336E900427A4D /* Products */,
+				B39671509FB6F6F18F787708 /* Pods */,
+				1345EB67A747469825534304 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +139,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B39671509FB6F6F18F787708 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D958C9C83852EBCE99017D7B /* Pods.debug.xcconfig */,
+				DEE8AD286E8442E1EE7136AA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8912567F1B6336E900427A4D /* Build configuration list for PBXNativeTarget "ClearOut" */;
 			buildPhases = (
+				F8FAF1040D2057D48DAFA4B8 /* Check Pods Manifest.lock */,
 				891256551B6336E900427A4D /* Sources */,
 				891256561B6336E900427A4D /* Frameworks */,
 				891256571B6336E900427A4D /* Resources */,
+				E83B568CF4911E75E6C7BFD3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,6 +244,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E83B568CF4911E75E6C7BFD3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8FAF1040D2057D48DAFA4B8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		891256551B6336E900427A4D /* Sources */ = {
@@ -351,9 +410,11 @@
 		};
 		891256801B6336E900427A4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D958C9C83852EBCE99017D7B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ClearOut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -361,9 +422,11 @@
 		};
 		891256811B6336E900427A4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEE8AD286E8442E1EE7136AA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ClearOut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -422,6 +485,7 @@
 				891256811B6336E900427A4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		891256821B6336E900427A4D /* Build configuration list for PBXNativeTarget "ClearOutTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +494,7 @@
 				891256841B6336E900427A4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
