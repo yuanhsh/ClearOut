@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		8912565F1B6336E900427A4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8912565E1B6336E900427A4D /* main.m */; };
 		891256621B6336E900427A4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 891256611B6336E900427A4D /* AppDelegate.m */; };
-		891256651B6336E900427A4D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891256641B6336E900427A4D /* FirstViewController.m */; };
-		891256681B6336E900427A4D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891256671B6336E900427A4D /* SecondViewController.m */; };
+		891256651B6336E900427A4D /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891256641B6336E900427A4D /* ListViewController.m */; };
+		891256681B6336E900427A4D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891256671B6336E900427A4D /* MapViewController.m */; };
 		8912566B1B6336E900427A4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 891256691B6336E900427A4D /* Main.storyboard */; };
 		8912566D1B6336E900427A4D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8912566C1B6336E900427A4D /* Images.xcassets */; };
 		891256701B6336E900427A4D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8912566E1B6336E900427A4D /* LaunchScreen.xib */; };
 		8912567C1B6336E900427A4D /* ClearOutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8912567B1B6336E900427A4D /* ClearOutTests.m */; };
+		89BF6CA31B64231900A56890 /* ListPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BF6CA21B64231900A56890 /* ListPhotoCell.m */; };
+		89BF6CA61B642ADA00A56890 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BF6CA51B642ADA00A56890 /* ProfileViewController.m */; };
+		89DCDF421B64784400796137 /* UIImage+AlphaAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DCDF3D1B64784300796137 /* UIImage+AlphaAdditions.m */; };
+		89DCDF431B64784400796137 /* UIImage+ResizeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DCDF3F1B64784300796137 /* UIImage+ResizeAdditions.m */; };
+		89DCDF441B64784400796137 /* UIImage+RoundedCornerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DCDF411B64784300796137 /* UIImage+RoundedCornerAdditions.m */; };
 		CE044AB5F165D3EB97CA5B07 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E767690C30E14E6CF12402B6 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -34,16 +39,26 @@
 		8912565E1B6336E900427A4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		891256601B6336E900427A4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		891256611B6336E900427A4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		891256631B6336E900427A4D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		891256641B6336E900427A4D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		891256661B6336E900427A4D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		891256671B6336E900427A4D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		891256631B6336E900427A4D /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		891256641B6336E900427A4D /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		891256661B6336E900427A4D /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		891256671B6336E900427A4D /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		8912566A1B6336E900427A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8912566C1B6336E900427A4D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8912566F1B6336E900427A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		891256751B6336E900427A4D /* ClearOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8912567A1B6336E900427A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8912567B1B6336E900427A4D /* ClearOutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClearOutTests.m; sourceTree = "<group>"; };
+		89BF6CA11B64231900A56890 /* ListPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPhotoCell.h; sourceTree = "<group>"; };
+		89BF6CA21B64231900A56890 /* ListPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPhotoCell.m; sourceTree = "<group>"; };
+		89BF6CA41B642ADA00A56890 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		89BF6CA51B642ADA00A56890 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		89DCDF3C1B64784300796137 /* UIImage+AlphaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AlphaAdditions.h"; sourceTree = "<group>"; };
+		89DCDF3D1B64784300796137 /* UIImage+AlphaAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AlphaAdditions.m"; sourceTree = "<group>"; };
+		89DCDF3E1B64784300796137 /* UIImage+ResizeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResizeAdditions.h"; sourceTree = "<group>"; };
+		89DCDF3F1B64784300796137 /* UIImage+ResizeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeAdditions.m"; sourceTree = "<group>"; };
+		89DCDF401B64784300796137 /* UIImage+RoundedCornerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCornerAdditions.h"; sourceTree = "<group>"; };
+		89DCDF411B64784300796137 /* UIImage+RoundedCornerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCornerAdditions.m"; sourceTree = "<group>"; };
 		D958C9C83852EBCE99017D7B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DEE8AD286E8442E1EE7136AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E767690C30E14E6CF12402B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,12 +114,17 @@
 		8912565B1B6336E900427A4D /* ClearOut */ = {
 			isa = PBXGroup;
 			children = (
+				89DCDF451B6478C100796137 /* UIImage */,
 				891256601B6336E900427A4D /* AppDelegate.h */,
 				891256611B6336E900427A4D /* AppDelegate.m */,
-				891256631B6336E900427A4D /* FirstViewController.h */,
-				891256641B6336E900427A4D /* FirstViewController.m */,
-				891256661B6336E900427A4D /* SecondViewController.h */,
-				891256671B6336E900427A4D /* SecondViewController.m */,
+				89BF6CA11B64231900A56890 /* ListPhotoCell.h */,
+				89BF6CA21B64231900A56890 /* ListPhotoCell.m */,
+				891256631B6336E900427A4D /* ListViewController.h */,
+				891256641B6336E900427A4D /* ListViewController.m */,
+				891256661B6336E900427A4D /* MapViewController.h */,
+				891256671B6336E900427A4D /* MapViewController.m */,
+				89BF6CA41B642ADA00A56890 /* ProfileViewController.h */,
+				89BF6CA51B642ADA00A56890 /* ProfileViewController.m */,
 				891256691B6336E900427A4D /* Main.storyboard */,
 				8912566C1B6336E900427A4D /* Images.xcassets */,
 				8912566E1B6336E900427A4D /* LaunchScreen.xib */,
@@ -137,6 +157,19 @@
 				8912567A1B6336E900427A4D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89DCDF451B6478C100796137 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				89DCDF3C1B64784300796137 /* UIImage+AlphaAdditions.h */,
+				89DCDF3D1B64784300796137 /* UIImage+AlphaAdditions.m */,
+				89DCDF3E1B64784300796137 /* UIImage+ResizeAdditions.h */,
+				89DCDF3F1B64784300796137 /* UIImage+ResizeAdditions.m */,
+				89DCDF401B64784300796137 /* UIImage+RoundedCornerAdditions.h */,
+				89DCDF411B64784300796137 /* UIImage+RoundedCornerAdditions.m */,
+			);
+			name = UIImage;
 			sourceTree = "<group>";
 		};
 		B39671509FB6F6F18F787708 /* Pods */ = {
@@ -283,10 +316,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				891256681B6336E900427A4D /* SecondViewController.m in Sources */,
+				891256681B6336E900427A4D /* MapViewController.m in Sources */,
+				89DCDF431B64784400796137 /* UIImage+ResizeAdditions.m in Sources */,
+				89DCDF421B64784400796137 /* UIImage+AlphaAdditions.m in Sources */,
+				89DCDF441B64784400796137 /* UIImage+RoundedCornerAdditions.m in Sources */,
 				891256621B6336E900427A4D /* AppDelegate.m in Sources */,
-				891256651B6336E900427A4D /* FirstViewController.m in Sources */,
+				891256651B6336E900427A4D /* ListViewController.m in Sources */,
 				8912565F1B6336E900427A4D /* main.m in Sources */,
+				89BF6CA61B642ADA00A56890 /* ProfileViewController.m in Sources */,
+				89BF6CA31B64231900A56890 /* ListPhotoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

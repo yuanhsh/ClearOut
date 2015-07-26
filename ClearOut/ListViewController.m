@@ -1,18 +1,31 @@
 //
-//  FirstViewController.m
+//  ListViewController.m
 //  ClearOut
 //
 //  Created by YUAN on 15/7/24.
 //  Copyright (c) 2015年 Yuan Haisheng. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "ListViewController.h"
+#import <ParseUI/PFImageView.h>
 
-@interface FirstViewController ()
+@interface ListViewController ()
+
 
 @end
 
-@implementation FirstViewController
+@implementation ListViewController
+
+- (id)initWithCoder:(NSCoder *)aCoder
+{
+    self = [super initWithCoder:aCoder];
+    if (self) {
+        // The className to query on
+        self.parseClassName = @"Item";
+        
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

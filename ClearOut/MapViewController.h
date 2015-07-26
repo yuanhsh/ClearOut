@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  MapViewController.h
 //  ClearOut
 //
 //  Created by YUAN on 15/7/24.
@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface SecondViewController : UIViewController
+@interface MapViewController : UIViewController
 
 
 @end

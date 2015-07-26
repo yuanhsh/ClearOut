@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define kProfilePicSmall    @"profilePicSmall"
+#define kProfilePicMedium   @"profilePicMedium"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
