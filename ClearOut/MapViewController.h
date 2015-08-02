@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 
 @interface MapViewController : UIViewController
-
+@property (strong, nonatomic) PFObject *item;
 
 @end
 
