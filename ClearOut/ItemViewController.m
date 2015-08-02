@@ -7,9 +7,19 @@
 //
 
 #import "ItemViewController.h"
+#import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
+#import <MapKit/MapKit.h>
 
 @interface ItemViewController ()
-
+@property (weak, nonatomic) IBOutlet PFImageView *photoView;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet PFImageView *avatar;
+@property (weak, nonatomic) IBOutlet UILabel *itemTitle;
+@property (weak, nonatomic) IBOutlet MKMapView *mapview;
+@property (weak, nonatomic) IBOutlet UILabel *adressLabel;
+@property (weak, nonatomic) IBOutlet UITextView *itemDesc;
+@property (strong, nonatomic) MKPointAnnotation *annotation;
 @end
 
 @implementation ItemViewController
@@ -18,6 +28,25 @@
     [super viewDidLoad];
     self.navigationController.navigationBarHidden = NO;
     self.title = self.item[@"title"];
+    NSNumber *price = _item[@"price"];
+    _priceLabel.text = [NSString stringWithFormat: @"$ %ld", [price integerValue]];
+    _adressLabel.text = _item[@"address"];
+    _itemTitle.text = _item[@"title"];
+    self.avatar.file = _item[@"owner"][@"profilePicMedium"];
+    [self.avatar loadInBackground];
+    self.avatar.layer.cornerRadius = self.avatar.frame.size.height/2.0f;
+    self.avatar.clipsToBounds = YES;
+    self.photoView.file = _item[@"images"][0];
+    [self.photoView loadInBackground];
+    self.itemDesc.text = _item[@"description"];
+    PFGeoPoint *point = _item[@"location"];
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(point.latitude, point.longitude);
+    MKCoordinateRegion region = MKCoordinateRegionMake(coordinate , MKCoordinateSpanMake(0.001, 0.001));
+    [_mapview setRegion:region animated:YES];
+    _annotation = [[MKPointAnnotation alloc] init];
+    [_mapview addAnnotation:_annotation];
+    _annotation.coordinate = coordinate;
+    _annotation.title = _item[@"address"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
