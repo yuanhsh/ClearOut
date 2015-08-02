@@ -15,6 +15,8 @@
 		8912566D1B6336E900427A4D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8912566C1B6336E900427A4D /* Images.xcassets */; };
 		891256701B6336E900427A4D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8912566E1B6336E900427A4D /* LaunchScreen.xib */; };
 		8912567C1B6336E900427A4D /* ClearOutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8912567B1B6336E900427A4D /* ClearOutTests.m */; };
+		894EBBC11B6D1DBB0079F440 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894EBBC01B6D1DBB0079F440 /* PublishViewController.m */; };
+		894EBBC31B6DAB3D0079F440 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894EBBC21B6DAB3D0079F440 /* MapKit.framework */; };
 		89BF6CA31B64231900A56890 /* ListPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BF6CA21B64231900A56890 /* ListPhotoCell.m */; };
 		89BF6CA61B642ADA00A56890 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BF6CA51B642ADA00A56890 /* ProfileViewController.m */; };
 		89DCDF421B64784400796137 /* UIImage+AlphaAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DCDF3D1B64784300796137 /* UIImage+AlphaAdditions.m */; };
@@ -49,6 +51,9 @@
 		891256751B6336E900427A4D /* ClearOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClearOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8912567A1B6336E900427A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8912567B1B6336E900427A4D /* ClearOutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClearOutTests.m; sourceTree = "<group>"; };
+		894EBBBF1B6D1DBB0079F440 /* PublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
+		894EBBC01B6D1DBB0079F440 /* PublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
+		894EBBC21B6DAB3D0079F440 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		89BF6CA11B64231900A56890 /* ListPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPhotoCell.h; sourceTree = "<group>"; };
 		89BF6CA21B64231900A56890 /* ListPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPhotoCell.m; sourceTree = "<group>"; };
 		89BF6CA41B642ADA00A56890 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				894EBBC31B6DAB3D0079F440 /* MapKit.framework in Frameworks */,
 				CE044AB5F165D3EB97CA5B07 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +92,7 @@
 		1345EB67A747469825534304 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				894EBBC21B6DAB3D0079F440 /* MapKit.framework */,
 				E767690C30E14E6CF12402B6 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -129,6 +136,8 @@
 				8912566C1B6336E900427A4D /* Images.xcassets */,
 				8912566E1B6336E900427A4D /* LaunchScreen.xib */,
 				8912565C1B6336E900427A4D /* Supporting Files */,
+				894EBBBF1B6D1DBB0079F440 /* PublishViewController.h */,
+				894EBBC01B6D1DBB0079F440 /* PublishViewController.m */,
 			);
 			path = ClearOut;
 			sourceTree = "<group>";
@@ -324,6 +333,7 @@
 				891256651B6336E900427A4D /* ListViewController.m in Sources */,
 				8912565F1B6336E900427A4D /* main.m in Sources */,
 				89BF6CA61B642ADA00A56890 /* ProfileViewController.m in Sources */,
+				894EBBC11B6D1DBB0079F440 /* PublishViewController.m in Sources */,
 				89BF6CA31B64231900A56890 /* ListPhotoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

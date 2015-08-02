@@ -8,6 +8,7 @@
 
 #import "ListViewController.h"
 #import <ParseUI/PFImageView.h>
+#import "ListPhotoCell.h"
 
 @interface ListViewController ()
 
@@ -29,6 +30,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeAll;
+    self.tableView.contentInset = UIEdgeInsetsMake(0.0f, 0.0f, CGRectGetHeight(self.tabBarController.tabBar.frame), 0.0f);
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -36,5 +39,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma PFTableDelegate
+- (PFUI_NULLABLE PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFUI_NULLABLE PFObject *)object {
+    ListPhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPhotoCell"];
+    cell.item = object;
+    return cell;
+}
+//- (PFUI_NULLABLE PFTableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//}
 
 @end

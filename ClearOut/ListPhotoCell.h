@@ -7,8 +7,8 @@
 //
 
 #import "PFTableViewCell.h"
-
+#import <Parse/Parse.h>
 @interface ListPhotoCell : PFTableViewCell
-
+@property (strong, nonatomic) PFObject *item;
 
 @end

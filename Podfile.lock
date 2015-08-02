@@ -1,4 +1,26 @@
 PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - BButton (4.0.2)
   - Bolts (1.2.0):
     - Bolts/AppLinks (= 1.2.0)
     - Bolts/Tasks (= 1.2.0)
@@ -36,6 +58,7 @@ PODS:
   - FormatterKit/TimeIntervalFormatter (1.8.0)
   - FormatterKit/UnitOfInformationFormatter (1.8.0)
   - FormatterKit/URLRequestFormatter (1.8.0)
+  - IPSqueezableViewController (0.0.2)
   - Parse (1.7.5.3):
     - Bolts/Tasks (>= 1.2.0)
   - ParseCrashReporting (1.7.5.3):
@@ -48,29 +71,43 @@ PODS:
     - Parse (~> 1.7.5.3)
   - ParseUI (1.1.4):
     - Parse (~> 1.7)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
   - SVProgressHUD (1.1.3)
+  - UIImage-ResizeMagick (0.0.1)
 
 DEPENDENCIES:
+  - AFNetworking
+  - BButton
   - DateTools
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FormatterKit
+  - IPSqueezableViewController
   - Parse
   - ParseCrashReporting
   - ParseFacebookUtilsV4
   - ParseUI
-  - SVProgressHUD (~> 1.1.3)
+  - SDWebImage
+  - SVProgressHUD
+  - UIImage-ResizeMagick
 
 SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  BButton: ab0f2ed3b998ae73c5188b57d270d81e4a1eeb27
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
   DateTools: 9bcc89e4f2f9004d8a7a2bd1b49269cf78968e65
   FBSDKCoreKit: 75bdd75c980e811db218488d99dd93b7740f4474
   FBSDKLoginKit: 02a9254a4c132412fa03577b0d53e936d068a7fb
   FormatterKit: bddde83e054edf9d9ee14f9de3b3a5103db256f4
+  IPSqueezableViewController: bfb302618fb621f97ad87e0f4a36b030f759866a
   Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881
   ParseCrashReporting: 36d2e2770d7502d943b81c013acd5193946ced46
   ParseFacebookUtilsV4: ea5db22e87b91cbf99b9d156642e2b97a4db7d51
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  UIImage-ResizeMagick: f08c2d14d1e8a5f0b402185408785540562f2fe7
 
 COCOAPODS: 0.38.1
