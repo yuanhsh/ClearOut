@@ -20,6 +20,7 @@
 @implementation ListPhotoCell
 
 - (void) setItem:(PFObject *)item {
+    _item = item;
     NSNumber *price = item[@"price"];
     _priceLabel.text = [NSString stringWithFormat: @"$ %ld", [price integerValue]];
     _locationLabel.text = item[@"address"];

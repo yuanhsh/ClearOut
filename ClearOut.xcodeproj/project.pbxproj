@@ -17,6 +17,7 @@
 		8912567C1B6336E900427A4D /* ClearOutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8912567B1B6336E900427A4D /* ClearOutTests.m */; };
 		894EBBC11B6D1DBB0079F440 /* PublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894EBBC01B6D1DBB0079F440 /* PublishViewController.m */; };
 		894EBBC31B6DAB3D0079F440 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894EBBC21B6DAB3D0079F440 /* MapKit.framework */; };
+		894EBBC71B6DDA4A0079F440 /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894EBBC61B6DDA4A0079F440 /* ItemViewController.m */; };
 		89BF6CA31B64231900A56890 /* ListPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BF6CA21B64231900A56890 /* ListPhotoCell.m */; };
 		89BF6CA61B642ADA00A56890 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BF6CA51B642ADA00A56890 /* ProfileViewController.m */; };
 		89DCDF421B64784400796137 /* UIImage+AlphaAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 89DCDF3D1B64784300796137 /* UIImage+AlphaAdditions.m */; };
@@ -54,6 +55,8 @@
 		894EBBBF1B6D1DBB0079F440 /* PublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublishViewController.h; sourceTree = "<group>"; };
 		894EBBC01B6D1DBB0079F440 /* PublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublishViewController.m; sourceTree = "<group>"; };
 		894EBBC21B6DAB3D0079F440 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		894EBBC51B6DDA4A0079F440 /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
+		894EBBC61B6DDA4A0079F440 /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
 		89BF6CA11B64231900A56890 /* ListPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPhotoCell.h; sourceTree = "<group>"; };
 		89BF6CA21B64231900A56890 /* ListPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPhotoCell.m; sourceTree = "<group>"; };
 		89BF6CA41B642ADA00A56890 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				8912565C1B6336E900427A4D /* Supporting Files */,
 				894EBBBF1B6D1DBB0079F440 /* PublishViewController.h */,
 				894EBBC01B6D1DBB0079F440 /* PublishViewController.m */,
+				894EBBC51B6DDA4A0079F440 /* ItemViewController.h */,
+				894EBBC61B6DDA4A0079F440 /* ItemViewController.m */,
 			);
 			path = ClearOut;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				89DCDF441B64784400796137 /* UIImage+RoundedCornerAdditions.m in Sources */,
 				891256621B6336E900427A4D /* AppDelegate.m in Sources */,
 				891256651B6336E900427A4D /* ListViewController.m in Sources */,
+				894EBBC71B6DDA4A0079F440 /* ItemViewController.m in Sources */,
 				8912565F1B6336E900427A4D /* main.m in Sources */,
 				89BF6CA61B642ADA00A56890 /* ProfileViewController.m in Sources */,
 				894EBBC11B6D1DBB0079F440 /* PublishViewController.m in Sources */,

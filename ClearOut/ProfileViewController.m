@@ -28,6 +28,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.tabBarController.title = @"Profile";
     
     if (![PFUser currentUser]) {// Check if user is cached
         //![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) { // Check if user is linked to Facebook

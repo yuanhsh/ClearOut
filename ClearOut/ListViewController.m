@@ -9,7 +9,7 @@
 #import "ListViewController.h"
 #import <ParseUI/PFImageView.h>
 #import "ListPhotoCell.h"
-
+#import "ItemViewController.h"
 @interface ListViewController ()
 
 
@@ -35,6 +35,11 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.tabBarController.title = @"ClearOut";
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -45,6 +50,15 @@
     ListPhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPhotoCell"];
     cell.item = object;
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    ItemViewController *controller = [segue destinationViewController];
+    ListPhotoCell *cell = (ListPhotoCell*)sender;
+    controller.item = cell.item;
 }
 //- (PFUI_NULLABLE PFTableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
 //    
