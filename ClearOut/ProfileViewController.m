@@ -48,6 +48,8 @@
         self.displayName.text = [PFUser currentUser][@"displayName"];
         self.avatar.file = [PFUser currentUser][kProfilePicMedium];
         [self.avatar loadInBackground];
+        self.avatar.layer.cornerRadius = self.avatar.frame.size.height/2.0f;
+        self.avatar.clipsToBounds = YES;
     }
 }
 
