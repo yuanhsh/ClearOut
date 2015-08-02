@@ -13,13 +13,15 @@
 #import <FBSDKCoreKit/FBSDKGraphRequest.h>
 #import "UIImage+ResizeAdditions.h"
 #import "AppDelegate.h"
+#import <GBFlatButton/GBFlatButton.h>
+#import <GBFlatButton/UIColor+GBFlatButton.h>
 
 @interface ProfileViewController () <PFLogInViewControllerDelegate, NSURLConnectionDelegate>
 @property (weak, nonatomic) IBOutlet PFImageView *avatar;
 @property (strong, nonatomic) NSMutableData *profilePicData;
 @property (weak, nonatomic) IBOutlet UILabel *displayName;
-
-
+@property (weak, nonatomic) IBOutlet GBFlatButton *publishBtn;
+@property (weak, nonatomic) IBOutlet GBFlatButton *logoutBtn;
 @end
 
 @implementation ProfileViewController
@@ -50,6 +52,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.publishBtn.layer.cornerRadius = 5;
+    self.logoutBtn.layer.cornerRadius = 5;
+    self.logoutBtn.tintColor = [UIColor gb_pinkColor];
     // Do any additional setup after loading the view.
 }
 

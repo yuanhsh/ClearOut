@@ -57,8 +57,11 @@
                                     <constraint firstAttribute="width" constant="150" id="Cxq-f4-3CJ"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgA-xd-bUr">
-                                <rect key="frame" x="258" y="250" width="85" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgA-xd-bUr" customClass="GBFlatButton">
+                                <rect key="frame" x="30" y="250" width="540" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6K1-CN-c7U"/>
+                                </constraints>
                                 <state key="normal" title="Publish Item">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -66,9 +69,10 @@
                                     <segue destination="Vkw-BA-B7j" kind="presentation" id="h1A-5f-2di"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qA-Ni-noi">
-                                <rect key="frame" x="272" y="305" width="56" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qA-Ni-noi" customClass="GBFlatButton">
+                                <rect key="frame" x="272" y="310" width="56" height="40"/>
                                 <state key="normal" title="Log Out">
+                                    <color key="titleColor" red="0.96666253306878303" green="0.054830942259052273" blue="0.24340453014252156" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -82,9 +86,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="7qA-Ni-noi" secondAttribute="centerX" id="4WU-SZ-AvM"/>
+                            <constraint firstItem="cgA-xd-bUr" firstAttribute="height" secondItem="7qA-Ni-noi" secondAttribute="height" id="8hx-OP-iyd"/>
                             <constraint firstItem="qrC-S7-IZV" firstAttribute="top" secondItem="WyV-Jw-h7k" secondAttribute="bottom" constant="5" id="DfB-s0-GqZ"/>
                             <constraint firstItem="WyV-Jw-h7k" firstAttribute="top" secondItem="lxJ-4W-2GP" secondAttribute="bottom" constant="30" id="ESj-P8-dv1"/>
-                            <constraint firstItem="7qA-Ni-noi" firstAttribute="top" secondItem="cgA-xd-bUr" secondAttribute="bottom" constant="25" id="UQp-O0-nZV"/>
+                            <constraint firstItem="cgA-xd-bUr" firstAttribute="width" secondItem="7qA-Ni-noi" secondAttribute="width" id="FBL-jp-hGf"/>
+                            <constraint firstAttribute="trailing" secondItem="cgA-xd-bUr" secondAttribute="trailing" constant="30" id="Rkv-mT-pE7"/>
+                            <constraint firstItem="7qA-Ni-noi" firstAttribute="top" secondItem="cgA-xd-bUr" secondAttribute="bottom" constant="20" id="UQp-O0-nZV"/>
+                            <constraint firstItem="cgA-xd-bUr" firstAttribute="leading" secondItem="XAD-cG-rzY" secondAttribute="leading" constant="30" id="UcO-gq-u1y"/>
                             <constraint firstItem="cgA-xd-bUr" firstAttribute="top" secondItem="WyV-Jw-h7k" secondAttribute="bottom" constant="50" id="gUk-2a-ueJ"/>
                             <constraint firstAttribute="centerX" secondItem="qrC-S7-IZV" secondAttribute="centerX" id="i6H-0a-LiQ"/>
                             <constraint firstAttribute="centerX" secondItem="cgA-xd-bUr" secondAttribute="centerX" id="ks6-FN-ABw"/>
@@ -95,6 +103,8 @@
                     <connections>
                         <outlet property="avatar" destination="WyV-Jw-h7k" id="h3L-wN-BAF"/>
                         <outlet property="displayName" destination="qrC-S7-IZV" id="cvv-A2-uSY"/>
+                        <outlet property="logoutBtn" destination="7qA-Ni-noi" id="VXu-g1-bqS"/>
+                        <outlet property="publishBtn" destination="cgA-xd-bUr" id="fr2-of-ssO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DR1-Fa-fBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -136,8 +146,11 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-5s-Ar3">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-Vt-pIK">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-Vt-pIK" customClass="GBFlatButton">
                                                     <rect key="frame" x="263" y="135" width="74" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="wJ2-KF-eAR"/>
+                                                    </constraints>
                                                     <state key="normal" title="Add Photo">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -177,7 +190,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price($):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5H0-Us-xcO">
-                                                    <rect key="frame" x="23" y="8" width="63" height="21"/>
+                                                    <rect key="frame" x="23" y="11" width="63" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -220,7 +233,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Input your description here..." translatesAutoresizingMaskIntoConstraints="NO" id="zwx-HM-Xu8">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zwx-HM-Xu8">
                                                     <rect key="frame" x="23" y="26" width="569" height="147"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -229,8 +242,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="zwx-HM-Xu8" secondAttribute="trailing" constant="8" id="JKB-Cy-n3W"/>
-                                                <constraint firstItem="zwx-HM-Xu8" firstAttribute="top" secondItem="D3f-Sa-Mfu" secondAttribute="bottom" constant="2" id="abo-HY-F13"/>
-                                                <constraint firstItem="zwx-HM-Xu8" firstAttribute="leading" secondItem="cKt-ag-b54" secondAttribute="leadingMargin" constant="15" id="lj9-Tq-iVp"/>
+                                                <constraint firstItem="zwx-HM-Xu8" firstAttribute="top" secondItem="D3f-Sa-Mfu" secondAttribute="bottom" constant="8" id="abo-HY-F13"/>
+                                                <constraint firstItem="zwx-HM-Xu8" firstAttribute="leading" secondItem="cKt-ag-b54" secondAttribute="leadingMargin" constant="10" id="lj9-Tq-iVp"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="zwx-HM-Xu8" secondAttribute="bottom" id="unu-0g-mdH"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -240,8 +253,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lg5-bJ-CsM" id="vCp-ge-wfl">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2d-M4-9cN">
-                                                    <rect key="frame" x="275" y="7" width="51" height="30"/>
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2d-M4-9cN" customClass="GBFlatButton">
+                                                    <rect key="frame" x="20" y="2" width="560" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="GcB-qZ-dXQ"/>
+                                                    </constraints>
                                                     <state key="normal" title="Publish">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -251,6 +267,8 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="B2d-M4-9cN" firstAttribute="leading" secondItem="vCp-ge-wfl" secondAttribute="leading" constant="20" id="8Ta-3N-jAI"/>
+                                                <constraint firstAttribute="trailing" secondItem="B2d-M4-9cN" secondAttribute="trailing" constant="20" id="gqu-gk-rW0"/>
                                                 <constraint firstAttribute="centerY" secondItem="B2d-M4-9cN" secondAttribute="centerY" id="gyn-O3-w4t"/>
                                                 <constraint firstAttribute="centerX" secondItem="B2d-M4-9cN" secondAttribute="centerX" id="hAb-Q8-d5x"/>
                                             </constraints>
@@ -282,6 +300,7 @@
                         <outlet property="location" destination="Urd-7X-7xC" id="BCn-eI-dVX"/>
                         <outlet property="photo" destination="tEh-5s-Ar3" id="msx-nn-Aar"/>
                         <outlet property="price" destination="cP6-ew-jiD" id="yxV-GL-CUm"/>
+                        <outlet property="publishBtn" destination="B2d-M4-9cN" id="frg-Gf-TUm"/>
                         <outlet property="titleText" destination="6sE-dY-Xx6" id="q1V-Am-nv6"/>
                     </connections>
                 </tableViewController>

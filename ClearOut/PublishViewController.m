@@ -12,6 +12,7 @@
 #import "UIImage+ResizeAdditions.h"
 #import <UIImage+ResizeMagick.h>
 #import <Parse/Parse.h>
+#import <GBFlatButton/GBFlatButton.h>
 
 @interface PublishViewController () <UINavigationControllerDelegate,UIImagePickerControllerDelegate,CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *photo;
@@ -19,7 +20,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *price;
 @property (weak, nonatomic) IBOutlet UITextField *location;
 @property (weak, nonatomic) IBOutlet UITextView *itemDesc;
-@property (weak, nonatomic) IBOutlet UIButton *addPhotoBtn;
+@property (weak, nonatomic) IBOutlet GBFlatButton *addPhotoBtn;
+@property (weak, nonatomic) IBOutlet GBFlatButton *publishBtn;
 @property (strong, nonatomic) UIImage *imageCache;
 @property (strong, nonatomic) CLLocationManager *locman;
 @property (strong, nonatomic) CLLocation *currentLoc;
@@ -30,6 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Publish Your Item";
+    self.addPhotoBtn.layer.cornerRadius = 5;
+    self.publishBtn.layer.cornerRadius = 5;
     [_itemDesc.layer setBorderColor: [[[UIColor grayColor] colorWithAlphaComponent:0.2] CGColor]];
     [_itemDesc.layer setBorderWidth: 1.0];
     [_itemDesc.layer setCornerRadius:5.0f];
@@ -74,7 +78,7 @@
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     NSString *mediaType = info[UIImagePickerControllerMediaType];
-    
+    self.addPhotoBtn.hidden = YES;
     if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0) == kCFCompareEqualTo) {
         UIImage *tmpImage = (UIImage *) info[UIImagePickerControllerOriginalImage];
         _imageCache = [[tmpImage resizedImageByWidth:1280] resizedImageByMagick: @"1280x640#"];
