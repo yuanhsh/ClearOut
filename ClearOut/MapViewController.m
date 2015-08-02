@@ -9,8 +9,10 @@
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
+#import "ItemAnnotation.h"
+#import "ItemViewController.h"
 
-@interface MapViewController () <CLLocationManagerDelegate>
+@interface MapViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 @property (weak, nonatomic) IBOutlet MKMapView *mapview;
 @property (strong, nonatomic) NSArray *items;
 @end
@@ -19,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    _mapview.delegate = self;
     [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error){
         MKCoordinateRegion region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(geoPoint.latitude, geoPoint.longitude), MKCoordinateSpanMake(0.005, 0.005));
         [_mapview setRegion:region animated:YES];
@@ -29,12 +31,7 @@
             _items = objects;
             NSMutableArray *annotations = [NSMutableArray array];
             for (PFObject *item in objects) {
-                MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-                PFGeoPoint *location = item[@"location"];
-                point.coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude);
-                NSNumber *price = item[@"price"];
-                point.title = [NSString stringWithFormat: @"$ %ld", [price integerValue]];
-                point.subtitle = item[@"title"];
+                ItemAnnotation *point = [[ItemAnnotation alloc] initWithPFItem:item];
                 [annotations addObject:point];
             }
             [_mapview showAnnotations:annotations animated:YES];
@@ -47,6 +44,29 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.tabBarController.title = @"NearBy";
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    if ([annotation isKindOfClass:[ItemAnnotation class]]) {
+        ItemAnnotation *itemAnnotation = (ItemAnnotation *)annotation;
+        MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"ItemAnnotation"];
+        if (annotationView == nil) {
+            annotationView = itemAnnotation.annotationView;
+        } else {
+            annotationView.annotation = annotation;
+        }
+        return annotationView;
+    } else
+         return nil;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+    if ([view.annotation isKindOfClass:[ItemAnnotation class]]) {
+        ItemAnnotation *itemAnnotation = (ItemAnnotation *)view.annotation;
+        ItemViewController *itemVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ItemViewController"];
+        itemVC.item = itemAnnotation.item;
+        [self.navigationController pushViewController:itemVC animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
