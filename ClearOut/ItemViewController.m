@@ -37,6 +37,7 @@
     self.avatar.layer.cornerRadius = self.avatar.frame.size.height/2.0f;
     self.avatar.clipsToBounds = YES;
     self.photoView.file = _item[@"images"][0];
+    self.photoView.contentMode = UIViewContentModeScaleAspectFit;
     [self.photoView loadInBackground];
     self.itemDesc.text = _item[@"description"];
     PFGeoPoint *point = _item[@"location"];
