@@ -22,11 +22,11 @@
 - (void) setItem:(PFObject *)item {
     _item = item;
     NSNumber *price = item[@"price"];
-    _priceLabel.text = [NSString stringWithFormat: @"$ %d", [price integerValue]];
+    _priceLabel.text = [NSString stringWithFormat: @"$ %ld", [price integerValue]];
     _locationLabel.text = item[@"address"];
     _itemTitle.text = item[@"title"];
-    //PFFile *file1 = item[@"owner"][@"profilePicMedium"];
-    //[self.userImage sd_setImageWithURL:[NSURL URLWithString:[file1 url]]];
+    PFFile *file1 = item[@"owner"][@"profilePicMedium"];
+    [self.userImage sd_setImageWithURL:[NSURL URLWithString:[file1 url]]];
 //    self.userImage.file = item[@"owner"][@"profilePicMedium"];
 //    [self.userImage loadInBackground];
     self.userImage.layer.cornerRadius = self.userImage.frame.size.height/2.0f;

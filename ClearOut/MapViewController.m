@@ -26,6 +26,7 @@
         MKCoordinateRegion region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(geoPoint.latitude, geoPoint.longitude), MKCoordinateSpanMake(0.005, 0.005));
         [_mapview setRegion:region animated:YES];
         PFQuery *query = [PFQuery queryWithClassName:@"Item"];
+        [query includeKey:@"owner"];
         [query whereKey:@"location" nearGeoPoint:geoPoint withinMiles:5];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
             _items = objects;

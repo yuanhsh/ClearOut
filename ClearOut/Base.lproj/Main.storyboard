@@ -143,7 +143,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z6o-k3-TlI" id="bOd-7n-o85">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-5s-Ar3">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-5s-Ar3">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhY-Vt-pIK" customClass="GBFlatButton">
@@ -160,7 +160,11 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="tEh-5s-Ar3" secondAttribute="trailing" id="5gZ-dc-6x0"/>
                                                 <constraint firstAttribute="centerX" secondItem="jhY-Vt-pIK" secondAttribute="centerX" id="7aF-lm-PtN"/>
+                                                <constraint firstAttribute="bottom" secondItem="tEh-5s-Ar3" secondAttribute="bottom" id="G3f-8m-CMm"/>
+                                                <constraint firstItem="tEh-5s-Ar3" firstAttribute="leading" secondItem="bOd-7n-o85" secondAttribute="leading" id="Ilw-1R-0hN"/>
+                                                <constraint firstItem="tEh-5s-Ar3" firstAttribute="top" secondItem="bOd-7n-o85" secondAttribute="top" id="Jq7-kX-cTd"/>
                                                 <constraint firstAttribute="centerY" secondItem="jhY-Vt-pIK" secondAttribute="centerY" id="qQB-Nh-JRm"/>
                                             </constraints>
                                         </tableViewCellContentView>

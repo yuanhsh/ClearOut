@@ -46,16 +46,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (PFQuery *)baseQuery
-{
-    PFQuery *query = [PFQuery queryWithClassName:@"Item"];
-    [query orderByDescending:@"updatedAt"];
-    return query;
-}
-
 - (PFQuery *)queryForTable
 {
-    return [self baseQuery];
+    PFQuery *query = [super queryForTable];
+    [query includeKey:@"owner"];
+    return query;
 }
 
 #pragma PFTableDelegate

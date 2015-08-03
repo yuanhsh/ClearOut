@@ -81,7 +81,7 @@
     self.addPhotoBtn.hidden = YES;
     if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0) == kCFCompareEqualTo) {
         UIImage *tmpImage = (UIImage *) info[UIImagePickerControllerOriginalImage];
-        _imageCache = [[tmpImage resizedImageByWidth:1280] resizedImageByMagick: @"1280x640#"];
+        _imageCache = [tmpImage resizedImageByMagick: @"1500x1200#"];
         _photo.image = _imageCache;
             }
     [picker dismissViewControllerAnimated:YES completion:nil];
