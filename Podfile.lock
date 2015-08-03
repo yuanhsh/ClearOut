@@ -76,6 +76,7 @@ PODS:
   - SDWebImage/Core (3.7.3)
   - SVProgressHUD (1.1.3)
   - UIImage-ResizeMagick (0.0.1)
+  - UIImageEffects (0.0.1)
 
 DEPENDENCIES:
   - AFNetworking
@@ -92,6 +93,7 @@ DEPENDENCIES:
   - SDWebImage
   - SVProgressHUD
   - UIImage-ResizeMagick
+  - UIImageEffects
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
@@ -109,5 +111,6 @@ SPEC CHECKSUMS:
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   UIImage-ResizeMagick: f08c2d14d1e8a5f0b402185408785540562f2fe7
+  UIImageEffects: 37b99fa461e4965f332ca82e92f2c22a1075ee84
 
-COCOAPODS: 0.38.1
+COCOAPODS: 0.38.2

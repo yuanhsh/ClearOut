@@ -21,9 +21,10 @@
 {
     self = [super initWithCoder:aCoder];
     if (self) {
-        // The className to query on
         self.parseClassName = @"Item";
-        
+        self.pullToRefreshEnabled = YES;
+        self.paginationEnabled = YES;
+        self.objectsPerPage = 25;
     }
     return self;
 }
@@ -45,10 +46,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (PFQuery *)baseQuery
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"Item"];
+    [query orderByDescending:@"updatedAt"];
+    return query;
+}
+
+- (PFQuery *)queryForTable
+{
+    return [self baseQuery];
+}
+
 #pragma PFTableDelegate
-- (PFUI_NULLABLE PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFUI_NULLABLE PFObject *)object {
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     ListPhotoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPhotoCell"];
     cell.item = object;
+    NSLog(@"%@.", object[@"title"]);
     return cell;
 }
 

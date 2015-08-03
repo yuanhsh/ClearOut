@@ -29,7 +29,7 @@
     self.navigationController.navigationBarHidden = NO;
     self.title = self.item[@"title"];
     NSNumber *price = _item[@"price"];
-    _priceLabel.text = [NSString stringWithFormat: @"$ %ld", [price integerValue]];
+    _priceLabel.text = [NSString stringWithFormat: @"$ %d", [price integerValue]];
     _adressLabel.text = _item[@"address"];
     _itemTitle.text = _item[@"title"];
     self.avatar.file = _item[@"owner"][@"profilePicMedium"];

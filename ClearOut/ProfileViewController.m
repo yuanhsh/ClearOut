@@ -166,6 +166,7 @@
         [fileMediumImage saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
                 [[PFUser currentUser] setObject:fileMediumImage forKey:kProfilePicMedium];
+                [[PFUser currentUser] saveInBackground];
                 [self processedFacebookResponse];
             }
         }];
