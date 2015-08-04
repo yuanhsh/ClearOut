@@ -59,8 +59,16 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionButtonClicked:)];
 }
-
+- (void)actionButtonClicked:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    BeforePost *postView = [storyboard instantiateViewControllerWithIdentifier:@"Tweets"];
+    postView.item = self.item;
+    postView.type = FALSE;
+    postView.imgTmp = self.photoView.image;
+    [self presentViewController:postView animated:YES completion:nil];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -134,7 +142,7 @@
 }
 */
 
-
+/*
 - (IBAction)tweet:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     BeforePost *postView = [storyboard instantiateViewControllerWithIdentifier:@"Tweets"];
@@ -143,6 +151,6 @@
     postView.imgTmp = self.photoView.image;
     [self presentViewController:postView animated:YES completion:nil];
 }
-
+*/
 
 @end

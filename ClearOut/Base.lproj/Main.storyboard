@@ -468,17 +468,6 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMU-AW-Jel">
-                                                    <rect key="frame" x="469" y="9" width="123" height="31"/>
-                                                    <color key="backgroundColor" red="0.81343376099999998" green="0.94904883100000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                                    <state key="normal" title="Share on Twitter">
-                                                        <color key="titleColor" red="0.54829545449999995" green="0.54829545449999995" blue="0.54829545449999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="tweet:" destination="a5v-jE-ftg" eventType="touchUpInside" id="q9Z-tp-QuL"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="6dw-ct-FOx" secondAttribute="bottom" constant="35" id="5Ua-q6-UWq"/>
@@ -574,7 +563,6 @@
                         <outlet property="mapview" destination="657-yd-uu7" id="eAZ-VX-Gcc"/>
                         <outlet property="photoView" destination="6dw-ct-FOx" id="Qk7-43-Vx2"/>
                         <outlet property="priceLabel" destination="YbK-JQ-hJD" id="BXq-2c-X4Z"/>
-                        <outlet property="tweet" destination="uMU-AW-Jel" id="jMW-JP-JQ0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuH-dN-jiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -595,7 +583,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please input:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cY-Ev-qxj">
                                 <rect key="frame" x="113" y="97" width="178" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.75132486730000003" green="0.84375924560000004" blue="0.909860322" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -603,7 +591,7 @@
                                 </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-b9-6U2">
-                                <rect key="frame" x="113" y="141" width="336" height="174"/>
+                                <rect key="frame" x="113" y="141" width="318" height="174"/>
                                 <color key="backgroundColor" red="0.81343376099999998" green="0.94904883100000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -616,7 +604,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs8-am-Ctd">
                                 <rect key="frame" x="124" y="323" width="124" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.75132486730000003" green="0.84375924560000004" blue="0.909860322" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -630,7 +618,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfU-9a-BZd">
                                 <rect key="frame" x="342" y="323" width="117" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Tweet">
                                     <color key="titleColor" red="0.75132486730000003" green="0.84375924560000004" blue="0.909860322" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
