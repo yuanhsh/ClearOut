@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 #import <MapKit/MapKit.h>
+#import <Social/Social.h>
 
 @interface ItemViewController ()
 @property (weak, nonatomic) IBOutlet PFImageView *photoView;
@@ -48,6 +49,8 @@
     [_mapview addAnnotation:_annotation];
     _annotation.coordinate = coordinate;
     _annotation.title = _item[@"address"];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(actionButtonClicked:)];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -58,6 +61,24 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)actionButtonClicked:(id)sender {
+    SLComposeViewController *composeVC = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    NSNumber *price = _item[@"price"];
+    NSString *initText = [NSString stringWithFormat:@"%@($ %ld):%@", _item[@"title"], (long)[price integerValue], _item[@"description"]];
+    [composeVC setInitialText:initText];
+    [composeVC addImage:_photoView.image];
+    SLComposeViewControllerCompletionHandler handler = ^(SLComposeViewControllerResult result){
+        if (result == SLComposeViewControllerResultCancelled) {
+            NSLog(@"Tweet was cancelled...");
+        } else {
+            NSLog(@"Upload tweet image successfully...");
+        }
+        [composeVC dismissViewControllerAnimated:YES completion:Nil];
+    };
+    composeVC.completionHandler = handler;
+    [self presentViewController:composeVC animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
