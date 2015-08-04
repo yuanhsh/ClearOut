@@ -11,6 +11,11 @@
 #import <ParseUI/ParseUI.h>
 #import <MapKit/MapKit.h>
 
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
+#import <Twitter/Twitter.h>
+#import "BeforePost.h"
 @interface ItemViewController ()
 @property (weak, nonatomic) IBOutlet PFImageView *photoView;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
@@ -20,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *adressLabel;
 @property (weak, nonatomic) IBOutlet UITextView *itemDesc;
 @property (strong, nonatomic) MKPointAnnotation *annotation;
+
 @end
 
 @implementation ItemViewController
@@ -127,5 +133,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (IBAction)tweet:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    BeforePost *postView = [storyboard instantiateViewControllerWithIdentifier:@"Tweets"];
+    postView.item = self.item;
+    postView.type = FALSE;
+    postView.imgTmp = self.photoView.image;
+    [self presentViewController:postView animated:YES completion:nil];
+}
+
 
 @end
