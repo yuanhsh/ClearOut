@@ -36,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-142" y="936"/>
+            <point key="canvasLocation" x="750" y="360"/>
         </scene>
         <!--You-->
         <scene sceneID="Utm-be-R97">
@@ -568,80 +568,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuH-dN-jiw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1532" y="-427"/>
-        </scene>
-        <!--Before Post-->
-        <scene sceneID="O0y-rG-hVi">
-            <objects>
-                <viewController storyboardIdentifier="Tweets" id="RzC-l7-gNt" customClass="BeforePost" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rKx-fU-AKQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="mg7-zo-W4I"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="f1f-XP-1Jz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please input:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cY-Ev-qxj">
-                                <rect key="frame" x="113" y="97" width="178" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.75132486730000003" green="0.84375924560000004" blue="0.909860322" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="76" y="157" width="100" height="21"/>
-                                </variation>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-b9-6U2">
-                                <rect key="frame" x="113" y="141" width="318" height="174"/>
-                                <color key="backgroundColor" red="0.81343376099999998" green="0.94904883100000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="65" y="211" width="240" height="128"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="RzC-l7-gNt" id="dkD-Gw-RXp"/>
-                                </connections>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bs8-am-Ctd">
-                                <rect key="frame" x="124" y="323" width="124" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.75132486730000003" green="0.84375924560000004" blue="0.909860322" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="76" y="393" width="48" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="cancel:" destination="RzC-l7-gNt" eventType="touchUpInside" id="cLK-xd-SSX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfU-9a-BZd">
-                                <rect key="frame" x="342" y="323" width="117" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Tweet">
-                                    <color key="titleColor" red="0.75132486730000003" green="0.84375924560000004" blue="0.909860322" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="225" y="393" width="40" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="tweet:" destination="RzC-l7-gNt" eventType="touchUpInside" id="pSo-dr-hnd"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="cancel" destination="Bs8-am-Ctd" id="FAB-Ov-KEV"/>
-                        <outlet property="textArea" destination="fgJ-b9-6U2" id="h6T-gU-G9Y"/>
-                        <outlet property="tweet" destination="kfU-9a-BZd" id="xio-Py-dQI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CFq-hW-zpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1352" y="290"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

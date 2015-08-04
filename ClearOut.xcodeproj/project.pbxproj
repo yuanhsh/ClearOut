@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7924FEDB1B707E0C000DAE18 /* BeforePost.m in Sources */ = {isa = PBXBuildFile; fileRef = 7924FEDA1B707E0C000DAE18 /* BeforePost.m */; };
 		8912565F1B6336E900427A4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8912565E1B6336E900427A4D /* main.m */; };
 		891256621B6336E900427A4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 891256611B6336E900427A4D /* AppDelegate.m */; };
 		891256651B6336E900427A4D /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891256641B6336E900427A4D /* ListViewController.m */; };
@@ -39,8 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7924FED91B707E0C000DAE18 /* BeforePost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeforePost.h; sourceTree = "<group>"; };
-		7924FEDA1B707E0C000DAE18 /* BeforePost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeforePost.m; sourceTree = "<group>"; };
 		891256591B6336E900427A4D /* ClearOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClearOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8912565D1B6336E900427A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8912565E1B6336E900427A4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -151,8 +148,6 @@
 				894EBBC61B6DDA4A0079F440 /* ItemViewController.m */,
 				894EBBC81B6EADF80079F440 /* ItemAnnotation.h */,
 				894EBBC91B6EADF80079F440 /* ItemAnnotation.m */,
-				7924FED91B707E0C000DAE18 /* BeforePost.h */,
-				7924FEDA1B707E0C000DAE18 /* BeforePost.m */,
 			);
 			path = ClearOut;
 			sourceTree = "<group>";
@@ -351,7 +346,6 @@
 				89BF6CA61B642ADA00A56890 /* ProfileViewController.m in Sources */,
 				894EBBCA1B6EADF80079F440 /* ItemAnnotation.m in Sources */,
 				894EBBC11B6D1DBB0079F440 /* PublishViewController.m in Sources */,
-				7924FEDB1B707E0C000DAE18 /* BeforePost.m in Sources */,
 				89BF6CA31B64231900A56890 /* ListPhotoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
